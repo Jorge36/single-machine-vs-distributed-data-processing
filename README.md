@@ -46,7 +46,7 @@ Local Environment
 Traditional analytics tools (Pandas, DuckDB, and Scikit-learn) are executed on a single machine using a Linux virtual machine (VM) running on a Windows host system. The VM is configured with 4vCPUs and ~8 GB of RAM. The following figure presents the hardware and software configuration used for the single-node experimental setup.
 
 
-<img width="940" height="779" alt="image" src="https://github.com/user-attachments/assets/bb92ac63-672a-4238-abe9-e2f100b63bc2" />
+<img width="940" height="779" alt="image" src="https://github.com/user-attachments/assets/f061552e-6b4b-414b-8369-9c771da4a721" />
 
 
 Cloud Environment
@@ -54,7 +54,7 @@ Cloud Environment
 The distributed analytical stack composed of Hadoop HDFS, Spark, Spark SQL, and Spark MLlib is deployed on Amazon Web Services. This environment enables the evaluation of distributed execution and horizontal scalability by adding nodes to the configuration. The following figure illustrates the distributed two-node experimental environment deployed on AWS
 
 
-<img width="921" height="1131" alt="image" src="https://github.com/user-attachments/assets/dd6541f0-2d21-44b7-b98d-3fbbcb19f95b" />
+<img width="921" height="1131" alt="image" src="https://github.com/user-attachments/assets/f46a7e10-581b-40c7-850a-2a8fee0c9c69" />
 
 
 ---
@@ -71,7 +71,7 @@ The primary dataset used in this research is the **NYC TLC Yellow Trip-Record Da
 The datasets consist of chronological accumulated monthly data files, with each slice covering a specific time period as shown in the following Table:
 
 
-<img width="940" height="273" alt="image" src="https://github.com/user-attachments/assets/dd32a612-70f6-4df2-94d5-7b073a489e1c" />
+<img width="940" height="273" alt="image" src="https://github.com/user-attachments/assets/e7f75f29-e8d1-4fa4-9ff6-55ad844eabbd" />
 
 
 ---
@@ -85,7 +85,7 @@ Operationally, it is structured in two stages: a schema-on-read phase for loadin
 The workflow begins with raw CSV data ingestion, followed by cleaning, transformation, profiling, and the creation of intermediate Parquet files partitioned by year and month. These Parquet files are then compacted into a single Parquet file per partition. Finally, analytical queries and machine learning tasks are executed on the compacted Parquet files. The following figure shows the pipeline architecture.
 
 
-<img width="940" height="608" alt="image" src="https://github.com/user-attachments/assets/69340caf-3193-4fea-b1da-ff027e803bce" />
+<img width="940" height="608" alt="image" src="https://github.com/user-attachments/assets/c454c57e-9e7a-4369-968d-88799300cdd7" />
 
 
 ---
@@ -141,22 +141,25 @@ Network activity is observed through the net_sent_mib and net_received_mib metri
 
 When comparing chunk-based processing with the distributed configuration, the single-node Spark setup exhibits higher execution time across all dataset slices. This suggests the presence of overhead associated with the distributed execution model operating on a single node, where additional layers of execution such as task scheduling and stage and task generation introduce computational cost without fully benefiting from distributed parallelism. In contrast, chunk-based processing follows a simpler execution model, processing data sequentially in manageable portions without requiring task orchestration or inter-component communication. This can lead to lower overhead and more efficient execution for the single-node environment. This represents a key advantage when handling datasets that exceed available memory, where incremental or partition-based (Spark) processing enables continued execution without failure. 
 
-<img width="940" height="543" alt="image" src="https://github.com/user-attachments/assets/f6fe4482-8ba2-4ffd-b6ba-77ccd4b934e4" />
+
+<img width="940" height="543" alt="image" src="https://github.com/user-attachments/assets/b67d9c0e-0a8e-4b4b-b363-47ebc79bf7e0" />
 
 
 However, when scaling out to a two-node distributed configuration, the performance behaviour changes significantly (see Figure below). From the second dataset slice onwards, two-node Spark outperforms chunk-based processing. This highlights a key advantage of distributed systems: the ability to scale out by adding more nodes. While Pandas can scale up by increasing hardware capacity, it remains constrained by its single-machine execution model and limited support for high-parallel task execution (see Table below). The last column in the table shows that Pandas provides only modest parallelism for this Pandas version and stack architecture, as reflected in the peak_process_cpu_percent_average values (average of the highest CPU utilisation reached during each run). Although Pandas can utilise more than one core, its parallelism remains limited. Average values are reported because each single-machine experiment was executed three times per slice.
 
-<img width="940" height="516" alt="image" src="https://github.com/user-attachments/assets/7c155940-5bf3-41a9-b9cf-f5de3b40412b" />
+
+<img width="940" height="516" alt="image" src="https://github.com/user-attachments/assets/a441bb08-f681-4b66-ab8b-ef8c281ad701" />
 
 
-<img width="940" height="493" alt="image" src="https://github.com/user-attachments/assets/5ab93810-85c8-4ef1-bf9c-142706351586" />
+<img width="940" height="493" alt="image" src="https://github.com/user-attachments/assets/d34ab666-13dd-4a1a-8e30-1676da83c4bf" />
 
 
 ### Cleaning, Transformation and Profiling Stage
 
 The performance impact of this stage is clearly reflected in the execution time results in the figure below, where execution times increase substantially across all configurations compared to the ingestion stage. In single-node Spark, this behaviour is highly likely associated with the cost of multi-stage processing and repeated actions. In particular, the number of Spark Jobs, tasks, and stages grew substantially. For example, while the third dataset slice in the ingestion stage required only 4 jobs, 5 stages, and 272 tasks, the same slice in this stage expands to 71 jobs, 160 stages and 11802 tasks. This shows that the workload is decomposed into much smaller units of work. Each of these units introduces some degree of scheduling, coordination, and execution overhead, which contribute to the observed increase in execution time. 
 
-<img width="940" height="564" alt="image" src="https://github.com/user-attachments/assets/a12ff84a-f2f1-4e44-8e36-f31dc95a8f08" />
+
+<img width="940" height="564" alt="image" src="https://github.com/user-attachments/assets/3975bd72-9144-4b18-b955-00f2e2a7f437" />
 
 
 Furthermore, the dataset size for the third slice is 10899MiB (~11.43GB), but single-node Spark reports 277509MiB total input (~291.33GB), it is around 25 times the dataset size. This suggests that the same data is read many times during execution, due to the repeated triggering of actions such as count, write, and collect. 
@@ -167,9 +170,11 @@ Taken together, these observations indicate that single-node Spark repeatedly sc
 
 The analytical queries results demonstrate clear differences between the execution characteristics of DuckDB and SparkSQL across all the Parquet dataset sizes. For both analytical workloads, DuckDB consistently achieved lower execution times than Spark SQL in both single-node and two-node distributed configurations.
 
-<img width="940" height="935" alt="image" src="https://github.com/user-attachments/assets/41928512-1dee-4731-8fd1-fef21c06dcac" />
 
-<img width="940" height="1133" alt="image" src="https://github.com/user-attachments/assets/c41a5489-fa35-4b49-b0a2-aa160e51d40a" />
+<img width="940" height="935" alt="image" src="https://github.com/user-attachments/assets/378f9c77-5e92-4d20-b009-fb174fa22395" />
+
+
+<img width="940" height="1133" alt="image" src="https://github.com/user-attachments/assets/f90837a0-37de-4253-87a1-a51673f62e1f" />
 
 
 ### Evidence-Based Guidelines
