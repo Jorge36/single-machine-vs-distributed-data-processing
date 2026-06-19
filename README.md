@@ -68,7 +68,7 @@ The primary dataset used in this research is the **NYC TLC Yellow Trip-Record Da
 - No attempts are made to re-identify individuals or combine data with external sources
 - The data is naturally partitioned by month and year, which facilitates the controlled generation of progressively larger datasets
 
-The datasets consist of chronological accumulated monthly data files, with each slice covering a specific time period as shown in the following Table:
+The datasets consist of chronological accumulated monthly data files, with each slice covering a specific time period as shown in the following table:
 
 
 <img width="940" height="273" alt="image" src="https://github.com/user-attachments/assets/e7f75f29-e8d1-4fa4-9ff6-55ad844eabbd" />
@@ -100,7 +100,7 @@ In the single-machine pipeline, data processing is performed using two execution
 
 - **research/** – Research Documentation: Early research materials, including the initial proposal and refined research plan
 - **doc/** – Final dissertation document
-- **project/** – Source code (Python scripts), benchmarking results in CSV and JSON formats, and the figures generated for the final disseration document using the Streamlit framework 
+- **project/** – Source code (Python scripts), benchmarking results in CSV and JSON formats, and the figures generated for the final dissertation document using the Streamlit framework 
   
 ---
 
@@ -156,7 +156,7 @@ However, when scaling out to a two-node distributed configuration, the performan
 
 ### Cleaning, Transformation and Profiling Stage
 
-The performance impact of this stage is clearly reflected in the execution time results in the figure below, where execution times increase substantially across all configurations compared to the ingestion stage. In single-node Spark, this behaviour is highly likely associated with the cost of multi-stage processing and repeated actions. In particular, the number of Spark Jobs, tasks, and stages grew substantially. For example, while the third dataset slice in the ingestion stage required only 4 jobs, 5 stages, and 272 tasks, the same slice in this stage expands to 71 jobs, 160 stages and 11802 tasks. This shows that the workload is decomposed into much smaller units of work. Each of these units introduces some degree of scheduling, coordination, and execution overhead, which contribute to the observed increase in execution time. 
+The performance impact of this stage is clearly reflected in the execution time results in the figure below, where execution times increase substantially across all configurations compared to the ingestion stage. In single-node Spark, this behaviour is highly likely associated with the cost of multi-stage processing and repeated actions. In particular, the number of Spark Jobs, tasks, and stages grew substantially. For example, while the third dataset slice in the ingestion stage required only 4 jobs, 5 stages, and 272 tasks, the same slice in this stage expands to 71 jobs, 160 stages, and 11802 tasks. This shows that the workload is decomposed into much smaller units of work. Each of these units introduces some degree of scheduling, coordination, and execution overhead, which contribute to the observed increase in execution time. 
 
 
 <img width="940" height="564" alt="image" src="https://github.com/user-attachments/assets/3975bd72-9144-4b18-b955-00f2e2a7f437" />
@@ -168,7 +168,7 @@ Taken together, these observations indicate that single-node Spark repeatedly sc
 
 ### Analytical queries Stage
 
-The analytical queries results demonstrate clear differences between the execution characteristics of DuckDB and SparkSQL across all the Parquet dataset sizes. For both analytical workloads, DuckDB consistently achieved lower execution times than Spark SQL in both single-node and two-node distributed configurations.
+The analytical queries results demonstrate clear differences between the execution characteristics of DuckDB and SparkSQL across all the Parquet dataset sizes. For both analytical workloads, DuckDB consistently achieved lower execution times than Spark SQL in both single-node and two-node distributed configurations (see Figures below).
 
 
 <img width="940" height="935" alt="image" src="https://github.com/user-attachments/assets/378f9c77-5e92-4d20-b009-fb174fa22395" />
