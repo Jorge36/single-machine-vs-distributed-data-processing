@@ -1,0 +1,39 @@
+{
+    "stage": "queries",
+    "operation": "standard",
+    "test_number": 34,
+    "slice_name": "2nd-slice",
+    "parquet_path": "../data/parquet/2nd-slice_compacted/",
+    "query_name": "q3_hourly_demand_and_speed",
+    "total_files": 14,
+    "total_rows_in_dataset": 52083818,
+    "rows_returned": 24,
+    "execution_time_sec": 1.6795604320000166,
+    "throughput_rows_sec": 31010386.412817974,
+    "threads": 0,
+    "parquet_files_size_mib": 1071.233310699463,
+    "benchmark_start_timestamp": "2026-04-15T22:19:32.714730+01:00",
+    "benchmark_end_timestamp": "2026-04-15T22:19:34.497600+01:00",
+    "avg_rss_mib": 152.49330357142858,
+    "peak_rss_mib": 162.50390625,
+    "memory_percent_of_total": 1.953479198998866,
+    "avg_process_cpu_percent": 259.89285714285705,
+    "peak_process_cpu_percent": 282.8,
+    "avg_system_cpu_per_core_percent": [
+        59.72857142857144,
+        60.04285714285715,
+        82.26428571428572,
+        62.39285714285715
+    ],
+    "peak_system_cpu_per_core_percent": [
+        70.0,
+        76.9,
+        100.0,
+        75.0
+    ],
+    "logical_read_mib": 705.84765625,
+    "logical_write_mib": 0.0,
+    "physical_read_mib": 706.4765625,
+    "physical_write_mib": 0.04296875,
+    "msg": "Query was processed successfully"
+}

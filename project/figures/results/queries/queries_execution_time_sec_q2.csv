@@ -1,0 +1,13 @@
+stage,operation,test_number,slice_name,parquet_path,query_name,total_rows_in_dataset,rows_returned,execution_time_sec,threads
+queries,DuckDB,10,1st-slice,../data/parquet/1st-slice_compacted/,q2_most_valuable_routes,3842004,100,0.215142204,0
+queries,DuckDB,28,2nd-slice,../data/parquet/2nd-slice_compacted/,q2_most_valuable_routes,52083818,100,1.783623034,0
+queries,DuckDB,40,3rd-slice,../data/parquet/3rd-slice_compacted/,q2_most_valuable_routes,107143226,100,3.487704347,0
+queries,DuckDB,46,4th-slice,../data/parquet/4th-slice_compacted/,q2_most_valuable_routes,633413894,100,19.42114312,0
+queries,Spark SQL - node 1,2,1st-slice,hdfs:///data/parquet/1st-slice_compacted,q2_most_valuable_routes,3842001,100,8.722449140000009,-1
+queries,Spark SQL - node 1,4,2nd-slice,hdfs:///data/parquet/2nd-slice_compacted,q2_most_valuable_routes,52083818,100,14.387206863000017,-1
+queries,Spark SQL - node 1,6,3rd-slice,hdfs:///data/parquet/3rd-slice_compacted,q2_most_valuable_routes,107143226,100,20.66334933,-1
+queries,Spark SQL - node 1,8,4th-slice,hdfs:///data/parquet/4th-slice_compacted,q2_most_valuable_routes,633413894,100,98.13843838,-1
+queries,Spark SQL - node 2,2,1st-slice,hdfs:///data/parquet/1st-slice_compacted,q2_most_valuable_routes,3842001,100,13.489619790999996,-1
+queries,Spark SQL - node 2,4,2nd-slice,hdfs:///data/parquet/2nd-slice_compacted,q2_most_valuable_routes,52083818,100,15.537101069000002,-1
+queries,Spark SQL - node 2,6,3rd-slice,hdfs:///data/parquet/3rd-slice_compacted,q2_most_valuable_routes,107143226,100,19.86093247000008,-1
+queries,Spark SQL - node 2,8,4th-slice,hdfs:///data/parquet/4th-slice_compacted,q2_most_valuable_routes,633413894,100,79.38873584199999,-1

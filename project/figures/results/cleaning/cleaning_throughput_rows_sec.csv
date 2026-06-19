@@ -1,0 +1,11 @@
+stage,operation-system,test_number,slice_path,throughput_rows_sec,chunksize,dataset_size_mib
+"ingestion, cleaning, transformation and profiling",in-memory - single-machine,1,../data/CSV/raw-data/1st-slice/,152161.3891,0,402.3603821
+"ingestion, cleaning, transformation and profiling",chunking - single-machine,4,../data/CSV/raw-data/2nd-slice,183954.5146,100000,5343.146865
+"ingestion, cleaning, transformation and profiling",chunking - single-machine,13,../data/CSV/raw-data/3rd-slice,181333.7666,100000,10898.74953
+"ingestion, cleaning, transformation and profiling",chunking - single-machine,18,../data/CSV/raw-data/4th-slice,191296.1792,100000,60401.1262
+"ingestion, cleaning, transformation and profiling",standard - 1 node,1,hdfs:///data/CSV/raw-data/1st-slice/,19578.096004455765,0,402.3603820800781
+"ingestion, cleaning, transformation and profiling",standard - 1 node,4,hdfs:///data/CSV/raw-data/2nd-slice/,11671.697840891582,0,5343.146864891052
+"ingestion, cleaning, transformation and profiling",standard - 1 node,6,hdfs:///data/CSV/raw-data/3rd-slice/,12493.143143441474,0,10898.749529838562
+"ingestion, cleaning, transformation and profiling",standard - 2 nodes,1,hdfs:///data/CSV/raw-data/1st-slice/,30212.97993008201,0,402.3603820800781
+"ingestion, cleaning, transformation and profiling",standard - 2 nodes,2,hdfs:///data/CSV/raw-data/2nd-slice/,23511.565556267433,0,5343.146864891052
+"ingestion, cleaning, transformation and profiling",standard - 2 nodes,3,hdfs:///data/CSV/raw-data/3rd-slice/,25479.257461762612,0,10898.749529838562

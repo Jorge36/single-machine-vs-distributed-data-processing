@@ -1,0 +1,39 @@
+{
+    "stage": "queries",
+    "operation": "standard",
+    "test_number": 26,
+    "slice_name": "2nd-slice",
+    "parquet_path": "../data/parquet/2nd-slice_compacted/",
+    "query_name": "q2_most_valuable_routes",
+    "total_files": 14,
+    "total_rows_in_dataset": 52083818,
+    "rows_returned": 100,
+    "execution_time_sec": 2.029367401999991,
+    "throughput_rows_sec": 25665051.06402622,
+    "threads": 3,
+    "parquet_files_size_mib": 1071.233310699463,
+    "benchmark_start_timestamp": "2026-04-15T19:28:09.555870+01:00",
+    "benchmark_end_timestamp": "2026-04-15T19:28:11.670952+01:00",
+    "avg_rss_mib": 210.88563368055554,
+    "peak_rss_mib": 306.78125,
+    "memory_percent_of_total": 3.687856407636421,
+    "avg_process_cpu_percent": 220.82222222222222,
+    "peak_process_cpu_percent": 243.6,
+    "avg_system_cpu_per_core_percent": [
+        13.777777777777777,
+        62.666666666666664,
+        86.88333333333335,
+        66.45555555555558
+    ],
+    "peak_system_cpu_per_core_percent": [
+        33.3,
+        71.4,
+        100.0,
+        77.8
+    ],
+    "logical_read_mib": 391.16015625,
+    "logical_write_mib": 0.0,
+    "physical_read_mib": 391.41015625,
+    "physical_write_mib": 0.01171875,
+    "msg": "Query was processed successfully"
+}

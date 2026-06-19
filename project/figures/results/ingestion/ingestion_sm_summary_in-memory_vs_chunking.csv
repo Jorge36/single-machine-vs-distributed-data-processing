@@ -1,0 +1,9 @@
+stage,operation-system,slice_path,dataset_size_mib,execution_time_sec_average,avg_rss_mib_average,chunksize
+ingestion,in-memory - single-machine,../data/CSV/raw-data/1st-slice,402.360382,11.468116,1429.25202,0
+ingestion,in-memory - single-machine,../data/CSV/raw-data/2nd-slice,5343.146865,137.542502,2110.193071,0
+ingestion,in-memory - single-machine,../data/CSV/raw-data/3rd-slice,10898.74953,297.311818,2059.392012,0
+ingestion,in-memory - single-machine,../data/CSV/raw-data/4th-slice,60401.1262,1691.705945,4030.123543,0
+ingestion,chunking - single-machine,../data/CSV/raw-data/1st-slice,402.360382,7.753904,143.000832,100000
+ingestion,chunking - single-machine,../data/CSV/raw-data/2nd-slice,5343.146865,100.21314,146.20791,100000
+ingestion,chunking - single-machine,../data/CSV/raw-data/3rd-slice,10898.74953,201.805419,148.975259,100000
+ingestion,chunking - single-machine,../data/CSV/raw-data/4th-slice,60401.1262,1133.928103,143.763942,100000

@@ -1,0 +1,171 @@
+{
+    "stage": "queries",
+    "operation": "standard",
+    "test_number": 100,
+    "slice_name": "2nd-slice",
+    "parquet_path": "hdfs:///data/parquet/2nd-slice_compacted",
+    "query_name": "q1_monthly_payment_statistics",
+    "total_files": 14,
+    "total_rows_in_dataset": 0,
+    "rows_returned": 0,
+    "execution_time_sec": 4.3300017269999955,
+    "throughput_rows_sec": 0.0,
+    "parquet_files_size_mib": 1071.233310699463,
+    "benchmark_start_timestamp": "2026-04-20T18:42:21.409825+00:00",
+    "benchmark_end_timestamp": "2026-04-20T18:42:25.739857+00:00",
+    "avg_rss_mib": 55.05909455128205,
+    "peak_rss_mib": 55.09375,
+    "memory_percent_of_total": 0.712166411840625,
+    "avg_process_cpu_percent": 14.22307692307692,
+    "peak_process_cpu_percent": 131.6,
+    "avg_system_cpu_per_core_percent": [
+        55.917948717948725,
+        45.23589743589743,
+        38.043589743589735,
+        62.205128205128204
+    ],
+    "peak_system_cpu_per_core_percent": [
+        100.0,
+        100.0,
+        100.0,
+        100.0
+    ],
+    "logical_read_mib": 0.0,
+    "logical_write_mib": 0.0,
+    "physical_read_mib": 20.14453125,
+    "physical_write_mib": 0.14453125,
+    "net_sent_mib": 0.1626911163330078,
+    "net_received_mib": 0.15468788146972656,
+    "failed_process_metric_count": 0,
+    "msg": "Query processed with errors, check pipeline.log",
+    "dataframe_partitions_parquet": 0,
+    "job_ids": [
+        0
+    ],
+    "stage_ids": [
+        0
+    ],
+    "num_jobs": 1,
+    "num_stages": 1,
+    "num_executors": 1,
+    "parallelism": 4,
+    "stage_metrics": [
+        {
+            "stage_id": 0,
+            "attempt_id": 0,
+            "name": "sql at NativeMethodAccessorImpl.java:0",
+            "num_tasks": 1,
+            "num_active_tasks": 0,
+            "num_completed_tasks": 0,
+            "num_failed_tasks": 1
+        }
+    ],
+    "spark_app_id": "local-1776710539568",
+    "total_tasks": 1,
+    "total_input_mib": 0.0,
+    "total_output_mib": 0.0,
+    "total_shuffle_read_mib": 0.0,
+    "total_shuffle_write_mib": 0.0,
+    "total_executor_runtime_sec": 0.964,
+    "stages": [
+        {
+            "stage_id": 0,
+            "attempt_id": 0,
+            "name": "sql at NativeMethodAccessorImpl.java:0",
+            "status": "FAILED",
+            "num_tasks": 1,
+            "input_mib": 0.0,
+            "output_mib": 0.0,
+            "shuffle_read_mib": 0.0,
+            "shuffle_write_mib": 0.0,
+            "executor_runtime_sec": 0.964
+        }
+    ],
+    "executors": [
+        {
+            "id": "driver",
+            "hostPort": "ip-172-31-32-203.eu-west-1.compute.internal:36625",
+            "isActive": true,
+            "rddBlocks": 0,
+            "memoryUsed": 38360,
+            "diskUsed": 0,
+            "totalCores": 4,
+            "maxTasks": 4,
+            "activeTasks": 0,
+            "failedTasks": 1,
+            "completedTasks": 0,
+            "totalTasks": 1,
+            "totalDuration": 9064,
+            "totalGCTime": 0,
+            "totalInputBytes": 0,
+            "totalShuffleRead": 0,
+            "totalShuffleWrite": 0,
+            "isBlacklisted": false,
+            "maxMemory": 384093388,
+            "addTime": "2026-04-20T18:42:19.632GMT",
+            "executorLogs": {},
+            "memoryMetrics": {
+                "usedOnHeapStorageMemory": 38360,
+                "usedOffHeapStorageMemory": 0,
+                "totalOnHeapStorageMemory": 384093388,
+                "totalOffHeapStorageMemory": 0
+            },
+            "blacklistedInStages": [],
+            "peakMemoryMetrics": {
+                "JVMHeapMemory": 0,
+                "JVMOffHeapMemory": 0,
+                "OnHeapExecutionMemory": 0,
+                "OffHeapExecutionMemory": 0,
+                "OnHeapStorageMemory": 0,
+                "OffHeapStorageMemory": 0,
+                "OnHeapUnifiedMemory": 0,
+                "OffHeapUnifiedMemory": 0,
+                "DirectPoolMemory": 0,
+                "MappedPoolMemory": 0,
+                "ProcessTreeJVMVMemory": 0,
+                "ProcessTreeJVMRSSMemory": 0,
+                "ProcessTreePythonVMemory": 0,
+                "ProcessTreePythonRSSMemory": 0,
+                "ProcessTreeOtherVMemory": 0,
+                "ProcessTreeOtherRSSMemory": 0,
+                "MinorGCCount": 0,
+                "MinorGCTime": 0,
+                "MajorGCCount": 0,
+                "MajorGCTime": 0,
+                "TotalGCTime": 0
+            },
+            "attributes": {},
+            "resources": {},
+            "resourceProfileId": 0,
+            "isExcluded": false,
+            "excludedInStages": []
+        }
+    ],
+    "jobs": [
+        {
+            "jobId": 0,
+            "name": "sql at NativeMethodAccessorImpl.java:0",
+            "description": "thesis benchmark",
+            "submissionTime": "2026-04-20T18:42:24.352GMT",
+            "completionTime": "2026-04-20T18:42:25.589GMT",
+            "stageIds": [
+                0
+            ],
+            "jobGroup": "benchmark-fa6d100327454786b79eab95d7d3b942",
+            "jobTags": [],
+            "status": "FAILED",
+            "numTasks": 1,
+            "numActiveTasks": 0,
+            "numCompletedTasks": 0,
+            "numSkippedTasks": 0,
+            "numFailedTasks": 1,
+            "numKilledTasks": 0,
+            "numCompletedIndices": 0,
+            "numActiveStages": 0,
+            "numCompletedStages": 0,
+            "numSkippedStages": 0,
+            "numFailedStages": 1,
+            "killedTasksSummary": {}
+        }
+    ]
+}

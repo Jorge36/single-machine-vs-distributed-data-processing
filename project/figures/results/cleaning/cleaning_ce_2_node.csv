@@ -1,0 +1,8 @@
+operation,slice_path,dataset_size_mib,avg_rss_mib,peak_rss_mib,memory_percent_of_total,avg_process_cpu_percent,peak_process_cpu_percent,avg_system_cpu_per_core_percent,peak_system_cpu_per_core_percent,logical_read_mib,logical_write_mib,physical_read_mib,physical_write_mib,net_sent_mib,net_received_mib,failed_process_metric_count,msg,dataframe_partitions
+standard - 2 nodes,hdfs:///…./1st-slice/,402.3603820800781,57.72791581693858,58.25390625,0.7530160025368151,11.740019193857988,99.4,"[81.50863723608457, 81.57447216890608, 84.74817658349339, 80.5209213051824]","[100.0, 100.0, 100.0, 100.0]",0,0.015625,443.28125,80.54296875,6583.351898193359,3289.944957,0,"Ingestion, cleaning, transformation and profiling finished successfully",8
+standard - 2 nodes,hdfs:///…./2nd-slice/,5343.146864891052,62.5029746,67.41015625,0.8713746582819726,10.557048212893474,50.1,"[89.91043870393176, 89.856886760941, 89.66461418550362, 89.83683331477704]","[100.0, 100.0, 100.0, 100.0]",0.05859375,0.05859375,45001.67969,1051.914063,87002.61215305328,41468.97584152222,0,"Ingestion, cleaning, transformation and profiling finished successfully",44
+standard - 2 nodes,hdfs:///…./3rd-slice/,10898.749529838562,62.56930179357134,66.9921875,0.8659709276139194,10.695797897471794,112,"[92.54730096857567, 92.6435979210917, 92.41524332624213, 92.22140030710668]","[100.0, 100.0, 100.0, 100.0]",0.328125,0.0625,140042.6142578125,2036.464844,177305.86650657654,86369.55128097534,0,"Ingestion, cleaning, transformation and profiling finished successfully",90
+,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,
+,stage,,,,,,,,,,,,,,,,,
+,"ingestion, cleaning, transformation and profiling",,,,,,,,,,,,,,,,,

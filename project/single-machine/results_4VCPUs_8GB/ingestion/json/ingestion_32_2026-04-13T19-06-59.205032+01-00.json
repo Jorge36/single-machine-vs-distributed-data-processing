@@ -1,0 +1,36 @@
+{
+    "stage": "ingestion",
+    "operation": "chunking",
+    "test_number": 32,
+    "slice_path": "../data/CSV/raw-data/3rd-slice",
+    "processed_files": 31,
+    "processed_rows": 107462293,
+    "execution_time_sec": 266.834096851,
+    "throughput_rows_sec": 402730.7389430327,
+    "chunksize": 3000000,
+    "dataset_size_mib": 10898.749529838562,
+    "benchmark_start_timestamp": "2026-04-13T19:06:59.205032+01:00",
+    "benchmark_end_timestamp": "2026-04-13T19:11:26.039171+01:00",
+    "avg_rss_mib": 965.491512447313,
+    "peak_rss_mib": 2061.67578125,
+    "memory_percent_of_total": 24.783655031379354,
+    "avg_process_cpu_percent": 107.84193888303477,
+    "peak_process_cpu_percent": 143.4,
+    "avg_system_cpu_per_core_percent": [
+        41.32202318229713,
+        33.14151738672288,
+        25.568809272918863,
+        2.908219178082193
+    ],
+    "peak_system_cpu_per_core_percent": [
+        100.0,
+        100.0,
+        100.0,
+        100.0
+    ],
+    "logical_read_mib": 10898.8359375,
+    "logical_write_mib": 0.0,
+    "physical_read_mib": 10981.1640625,
+    "physical_write_mib": 2.71484375,
+    "msg": "Ingestion finished successfully"
+}

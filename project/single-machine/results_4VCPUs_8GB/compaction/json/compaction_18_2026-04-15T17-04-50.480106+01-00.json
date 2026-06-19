@@ -1,0 +1,40 @@
+{
+    "stage": "compaction to one parquet file per partition",
+    "operation": "standard",
+    "test_number": 18,
+    "parquet_path": "../data/parquet/3rd-slice",
+    "compacted_parquet_path": "../data/parquet/3rd-slice_compacted",
+    "processed_files": 1091,
+    "processed_rows": 107143226,
+    "execution_time_sec": 24.746671821999996,
+    "throughput_rows_sec": 4329601.441788579,
+    "threads": 0,
+    "parquet_size_mib": 2193.437110900879,
+    "compacted_parquet_size_mib": 2199.4268884658813,
+    "compacted_parquet_files_created": 31,
+    "total_partitions_created": 31,
+    "benchmark_start_timestamp": "2026-04-15T17:04:50.480106+01:00",
+    "benchmark_end_timestamp": "2026-04-15T17:05:15.343404+01:00",
+    "avg_rss_mib": 1059.9471594769022,
+    "peak_rss_mib": 1384.17578125,
+    "memory_percent_of_total": 16.639345224539053,
+    "avg_process_cpu_percent": 312.9152173913044,
+    "peak_process_cpu_percent": 400.5,
+    "avg_system_cpu_per_core_percent": [
+        67.5407608695652,
+        68.19673913043476,
+        71.27391304347826,
+        63.60326086956524
+    ],
+    "peak_system_cpu_per_core_percent": [
+        100.0,
+        100.0,
+        100.0,
+        100.0
+    ],
+    "logical_read_mib": 2198.93359375,
+    "logical_write_mib": 2199.5078125,
+    "physical_read_mib": 2199.2890625,
+    "physical_write_mib": 1673.6484375,
+    "msg": "Compaction step completed successfully"
+}

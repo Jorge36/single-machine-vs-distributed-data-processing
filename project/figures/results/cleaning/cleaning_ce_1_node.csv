@@ -1,0 +1,9 @@
+operation,slice_path,dataset_size_mib,logical_read_mib,logical_write_mib,physical_read_mib,physical_write_mib,net_sent_mib,net_received_mib,dataframe_partitions
+standard - 1 node,hdfs:///…./1st-slice/,402.3603820800781,0,0.01953125,442.46875,149.0742188,6573.478049278259,6573.477442741394,4
+standard - 1 node,hdfs:///…./2nd-slice/,5343.146864891052,0,0.05859375,45271.57813,2044.957031,86917.17323493958,86917.16685390472,44
+standard - 1 node (No schema inference),hdfs:///…./2nd-slice/,5343.146864891052,0,0.0625,42373.21094,2053.261719,81447.23528289795,81447.22679424286,44
+standard - 1 node,hdfs:///…./3rd-slice/,10898.749529838562,0.00390625,0.0625,169112.0547,4116.101563,176984.60621356964,176984.58418655396,90
+,,,,,,,,,
+,,,,,,,,,
+,stage,,,,,,,,
+,"ingestion, cleaning, transformation and profiling",,,,,,,,

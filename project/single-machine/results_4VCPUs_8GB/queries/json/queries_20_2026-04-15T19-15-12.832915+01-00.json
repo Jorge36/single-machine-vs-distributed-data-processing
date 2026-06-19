@@ -1,0 +1,39 @@
+{
+    "stage": "queries",
+    "operation": "standard",
+    "test_number": 20,
+    "slice_name": "2nd-slice",
+    "parquet_path": "../data/parquet/2nd-slice_compacted/",
+    "query_name": "q1_monthly_payment_statistics",
+    "total_files": 14,
+    "total_rows_in_dataset": 52083818,
+    "rows_returned": 71,
+    "execution_time_sec": 0.8343701640000063,
+    "throughput_rows_sec": 62422915.20865025,
+    "threads": 3,
+    "parquet_files_size_mib": 1071.233310699463,
+    "benchmark_start_timestamp": "2026-04-15T19:15:12.832915+01:00",
+    "benchmark_end_timestamp": "2026-04-15T19:15:13.740438+01:00",
+    "avg_rss_mib": 143.22600446428572,
+    "peak_rss_mib": 151.26171875,
+    "memory_percent_of_total": 1.8183363511371236,
+    "avg_process_cpu_percent": 195.95714285714286,
+    "peak_process_cpu_percent": 216.2,
+    "avg_system_cpu_per_core_percent": [
+        55.42857142857143,
+        46.8,
+        58.52857142857143,
+        59.35714285714287
+    ],
+    "peak_system_cpu_per_core_percent": [
+        63.6,
+        63.6,
+        100.0,
+        70.0
+    ],
+    "logical_read_mib": 42.23046875,
+    "logical_write_mib": 0.0,
+    "physical_read_mib": 42.4921875,
+    "physical_write_mib": 0.0,
+    "msg": "Query was processed successfully"
+}

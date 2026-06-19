@@ -1,0 +1,5 @@
+stage,operation-system,test_number,slice_path,memory_percent_of_total,dataset_size_mib,chunksize
+"ingestion, cleaning, transformation and profiling",in-memory - single-machine,1,../data/CSV/raw-data/1st-slice/,38.16466589,402.3603821,0
+"ingestion, cleaning, transformation and profiling",chunking - single-machine,4,../data/CSV/raw-data/2nd-slice,3.037915838,5343.146865,100000
+"ingestion, cleaning, transformation and profiling",chunking - single-machine,13,../data/CSV/raw-data/3rd-slice,3.128027292,10898.74953,100000
+"ingestion, cleaning, transformation and profiling",chunking - single-machine,18,../data/CSV/raw-data/4th-slice,3.178508103,60401.1262,100000

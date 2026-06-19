@@ -1,0 +1,12 @@
+stage,operation - system,test_number,slice_name,parquet_path,total_rows_used_ml,execution_time_sec,threads,chunksize,mae,rmse,r2
+machine learning,in-memory - single-machine,4,1st-slice,../data/parquet/1st-slice_compacted/,3594845,5.090913955,,,2.466614194,3.421404101,0.271308036
+machine learning,chunking - single-machine,10,2nd-slice,../data/parquet/2nd-slice_compacted/,50036106,62.69491686,0,98304,5.03764511,6.544693306,-1.647496324
+machine learning,chunking - single-machine,16,3rd-slice,../data/parquet/3rd-slice_compacted/,104459102,127.9493407,0,98304,4.058913244,5.403227545,-0.801701262
+machine learning,standard - 1 node,1,1st-slice,hdfs:///data/parquet/1st-slice_compacted,3594842,107.00556695900002,,,2.468845096084139,3.3978141918756073,0.26384837046191245
+machine learning,standard - 1 node,2,2nd-slice,hdfs:///data/parquet/2nd-slice_compacted,50036106,549.2670856670001,,,2.309779253416887,3.3020120843920107,0.32722899418709994
+machine learning,standard - 1 node,3,3rd-slice,hdfs:///data/parquet/3rd-slice_compacted,104459102,1139.884648,,,2.1207233543695376,3.197427997102272,0.36833981009385675
+machine learning,standard - 1 node,4,4th-slice,hdfs:///data/parquet/4th-slice_compacted,633413894,10907.11278,,,1.1473900616288355,2.1542349886730205,0.47318974865132934
+machine learning,standard - 2 nodes,1,1st-slice,hdfs:///data/parquet/1st-slice_compacted,3594842,104.9291855,,,2.4749384245151735,3.4110410202428474,0.2644773557793675
+machine learning,standard - 2 nodes,2,2nd-slice,hdfs:///data/parquet/2nd-slice_compacted,50036106,320.88039083199993,,,2.3097792534169144,3.302012084392006,0.3272289941871016
+machine learning,standard - 2 nodes,3,3rd-slice,hdfs:///data/parquet/3rd-slice_compacted,104459102,624.4107908650001,,,2.1207233543695514,3.1974279971022708,0.3683398100938574
+machine learning,standard - 2 nodes,4,4th-slice,hdfs:///data/parquet/4th-slice_compacted,633413894,4515.718692,,,1.147231794284503,2.151920011585159,0.4737662919878973

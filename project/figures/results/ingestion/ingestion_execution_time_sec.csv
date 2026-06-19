@@ -1,0 +1,13 @@
+stage,operation-system,test_number,slice_path,execution_time_sec,chunksize,dataset_size_mib
+ingestion,in-memory - single-machine,1,../data/CSV/raw-data/1st-slice,13.26463912,0,402.3603820800781
+ingestion,chunking - single-machine,4,../data/CSV/raw-data/2nd-slice,99.77246015,100000,5343.146865
+ingestion,chunking - single-machine,25,../data/CSV/raw-data/3rd-slice,200.1441865,100000,10898.74953
+ingestion,chunking - single-machine,37,../data/CSV/raw-data/4th-slice,1127.913328,100000,60401.1262
+ingestion,standard - 1 node,1,hdfs:///data/CSV/raw-data/1st-slice/,17.005696516999933,0,402.3603820800781
+ingestion,standard - 1 node,1,hdfs:///data/CSV/raw-data/2nd-slice/,116.03595956500001,0,5343.146865
+ingestion,standard - 1 node,7,hdfs:///data/CSV/raw-data/3rd-slice/,235.05277582599996,0,10898.74953
+ingestion,standard - 1 node,10,hdfs:///data/CSV/raw-data/4th-slice/,1456.449485,0,60401.1262
+ingestion,standard - 2 nodes,1,hdfs:///data/CSV/raw-data/1st-slice/,20.32018902,0,402.3603820800781
+ingestion,standard - 2 nodes,2,hdfs:///data/CSV/raw-data/2nd-slice/,79.45478632,0,5343.146865
+ingestion,standard - 2 nodes,3,hdfs:///data/CSV/raw-data/3rd-slice/,168.2080079,0,10898.74953
+ingestion,standard - 2 nodes,4,hdfs:///data/CSV/raw-data/4th-slice/,976.148549,0,60401.1262
